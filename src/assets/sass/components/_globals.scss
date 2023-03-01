@@ -1,0 +1,62 @@
+/* ------------------- Font ------------------- */
+
+/* Font weight */
+
+/* Font size */
+
+/* Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  margin: 0;
+}
+
+p,
+ol,
+ul,
+dl {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+/* Font family */
+
+/* ------------------- Colors ------------------- */
+$primary: #6096b4;
+$secondary: #93bfcf;
+$grey: #bdcdd6;
+$beige: #eee9da;
+$primary-dark: #243844;
+
+/* ------------------- box-sizing ------------------- */
+
+* {
+  box-sizing: border-box;
+}
+
+/* ------------------- body ------------------- */
+
+body {
+  color: $primary-dark;
+}
+
+/* ------------------- Mixins ------------------- */
+
+@mixin button {
+  background-color: $beige;
+  color: $primary-dark;
+  &:hover, &:active, &:focus{
+  background-color: #D0CCBF;
+    outline: none;
+}
+}

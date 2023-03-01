@@ -1,0 +1,165 @@
+.hero {
+  &__content {
+    width: 100%;
+    @media (min-width: 768px) {
+    // @include media-breakpoint-up(md) {
+      width: 50%;
+    }
+  }
+}
+
+.about {
+  background-color: $beige;
+  &__content {
+    max-width: 37.5rem;
+  }
+}
+
+.features {
+  [class*='col-'] > div {
+    background-color: $grey;
+    margin: 1rem 0;
+    padding: 1rem;
+    @media (min-width: 768px) {
+    // @include media-breakpoint-up(md) {
+      background-color: transparent;
+      background-image: linear-gradient(
+        26deg,
+        transparent 0%,
+        $grey 0% 88%,
+        transparent 88%
+      );
+      margin: 0;
+    }
+  }
+
+  i {
+    font-size: 3rem;
+  }
+
+  span {
+    background-color: $secondary;
+  }
+}
+
+.projects {
+  &__container--gallery-item {
+    padding-top: calc(var(--bs-gutter-x) * 0.5);
+    padding-bottom: calc(var(--bs-gutter-x) * 0.5);
+    .projects__overlay {
+      position: relative;
+
+      img {
+        width: 100%;
+        transition: all 0.2s ease;
+      }
+
+      .overlay {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        bottom: 0;
+        left: 50%;
+        opacity: 0;
+        transform: translate(-50%, -50%);
+        transition: all 0.2s ease;
+      }
+
+      i {
+        font-size: 3rem;
+        margin: 0 0.5rem;
+        color: $primary-dark;
+      }
+
+      &:hover img {
+        opacity: 0.2;
+      }
+
+      &:hover .overlay {
+        opacity: 1;
+      }
+    }
+  }
+
+  .see__more {
+    @include button;
+  }
+}
+
+.articles {
+  table {
+    width: auto;
+    margin: 1.5rem auto;
+
+    caption {
+      padding: 0.5rem;
+      background-color: $grey;
+    }
+
+    a {
+      color: $primary-dark;
+      text-decoration: none;
+    }
+  }
+
+  .see__more {
+    @include button;
+  }
+}
+
+.testimonials__container {
+  #testimonial__carousel {
+    max-width: 800px;
+    margin: 0 auto;
+
+    .carousel-inner {
+      width: 95%;
+      margin: 0 auto;
+    }
+
+    .card {
+      border: none;
+
+      &-header {
+        width: 120px;
+        height: 120px;
+        background-color: transparent;
+        border: none;
+
+        img {
+          display: block;
+          width: 100%;
+          height: 100%;
+          border-radius: 10em;
+        }
+      }
+
+      .card-text {
+        max-width: 70%;
+        font-size: 20px;
+        text-align: center;
+        font-family: 'Share Tech Mono', monospace;
+        margin: 0 auto;
+      }
+    }
+  }
+}
+
+.contact {
+  background-color: $primary;
+  color: white;
+
+  &__content {
+    max-width: 1100px;
+    min-height: 200px;
+    background-color: $secondary;
+    margin-top: -4rem;
+  }
+}
+
+h2 {
+  font-family: 'Rubik Dirt', cursive;
+}
+h5 {
+  color: $primary-dark;
+}
